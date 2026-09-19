@@ -56,7 +56,7 @@ int main() {
     int n;
     while (scanf("%d", &n) == 1 && n != 0) {
         vector<int> a(n), buf(n);
-        for (int& x : a) scanf("%d", &x);
+        for (int i = 0; i < n; ++i) scanf("%d", &a[i]);
 
         printf("Minimum exchange operations : %lld\n", contaInversao(a, buf, 0, n));
     }
