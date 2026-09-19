@@ -1,0 +1,153 @@
+<style>
+.testcase, .testcase th, .testcase td {
+  border: 1px solid black;
+  background:#F0F0F0;
+  border-collapse: collapse;
+  vertical-align: top;
+  color:blue;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.testcase td {
+  padding:6px;
+  width:350px;
+  color:black;
+}
+
+h2  {
+  background: #B0B0B0;
+}
+
+pre {
+    white-space: pre-wrap;
+    text-align: justify;
+}
+</style>
+<div align="center"><h2>Flip Sort</h2></div>
+
+
+<center>
+<img src="figura-1.gif" width="40%"/>
+</center>
+
+<p>
+A ordenação é um dos problemas mais importantes em computação.
+Quase todos os problemas em computação podem ser resolvido mais eficientemente quando os dados estão ordenados.
+Existem alguns excelentes algoritmos de ordenação que alcançam o limite inferior de <i>n lg n</i> comparações, onde <i>n</i> é o tamanho da entrada.
+</p>
+
+<p>
+Hoje vamos pensar em uma nova forma de ordenação.
+Seja <i>A[1..n]</i> um vetor de <i>n</i> números inteiros.
+Suponha que seu computador possui apenas a operação (Flip), que troca o valor de duas posições consecutivos <i>A[i]</i> e <i>A[i+1]</i>, 1 &#8804; i &#8804; n-1.
+Pensando um pouco, você vai ver que é sempre possível ordenar  <i>A[1..n]</i> utilizando apenas a operação Flip.
+</p>
+
+
+<p>
+Para avaliar essa nova abordagem, seu trabalho é escrever um programa de computador que receba como entrada um conjunto <i>A[1..n]</i> de inteiros, e calcule o número mínimo de operações de Flip necessárias para ordenar <i>A[1..n]</i>.
+Por exemplo, para ordenar {2, 3, 1} são necessárias 2 operações de Flip.
+</p>
+
+<p>
+Uma forma eficiente de contar o número mínimo de operações de Flip necessárias é utilizando o algoritmo <b>Merge Sort</b>.
+</p>
+
+     
+
+<hr>
+<h2>Especificação de entrada e saída</h2>
+<h3>Entrada</h3>
+
+<p>
+A entrada contém <i>K</i> casos de testes, K &#8804; 100000.
+</p>
+<p>
+Cada caso de teste começa com um inteiro positivo <i>N</i> (N &#8804; 1000) que corresponde a quantidade de números do conjunto <i>A</i>.
+</p>
+<p>
+Em seguida, são informados os N valores inteiros <i>A[1]</i> <i>A[2]</i> ... <i>A[n]</i>.
+</p>
+<p>
+A entrada termina quando <i>N</i> é igual à zero.
+</p>
+
+<h3>Saída</h3>
+<p>
+Para cada conjunto de dados imprima:<br><br>
+<i>Minimum exchange operations : M</i><br><br>
+onde M é o número mínimo de operações necessárias para realizar a ordenação.
+Utilize uma linha separada para cada caso de teste.
+</p>
+<!--------------------------------------------------------------------->
+
+<h2>Exemplos</h2>
+
+
+<table class="testcase">
+<tr><th>Entrada</th>
+<th>Saída</th></tr>
+<tr><td>
+<pre>
+5
+6 2 1 5 4
+8
+3 5 8 2 1 9 7 0
+2
+0 0 
+0
+</pre>
+</td><td>
+<pre>
+Minimum exchange operations : 6
+Minimum exchange operations : 16
+Minimum exchange operations : 0
+
+</pre>
+</td></tr>
+</table>
+
+<br>
+
+<table class="testcase">
+<tr><th>Entrada</th>
+<th>Saída</th></tr>
+<tr><td>
+<pre>
+5
+1 2 3 4 5
+8
+1 3 5 2 4 6 8 7
+4
+4 3 2 1
+0
+</pre>
+</td><td>
+<pre>
+Minimum exchange operations : 0
+Minimum exchange operations : 4
+Minimum exchange operations : 6
+</pre>
+</td></tr>
+</table>
+
+<br>
+
+
+
+<br>
+<hr>
+<br>
+<center>
+<font color=red>
+<b>ATENÇÃO</b>
+<p style="background-color:yellow">Seu algoritmo precisa ser de divisão e conquista. DICA: a partir de um dos exemplos vistos em aula.</p>
+
+</font>
+</center>
+<br>
+
+
+
+
