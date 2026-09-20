@@ -1,0 +1,90 @@
+<div align="center"><h1>JRIDE - Jill pedala outra vez</h1></div>
+
+<p>
+Jill gosta muito de andar de bicicleta, mas desde que sua linda cidade 
+Campinas cresceu, Jill utiliza o excelente sistema de transporte de ônibus
+para partes de suas viagens em Campinas.<br>
+Jill possui uma bicicleta dobrável que ela carrega quando anda de ônibus.
+Quando o ônibus chega em alguma parte agradável da cidade (ex. Barão), Jill desce do ônibus
+e usa sua bicicleta.<br>
+Para não se perder, ela segue o mesmo caminho do ônibus até chegar ao seu destino final ou chegar à uma
+parte da cidade da qual ela não gosta.<br>
+No segundo caso, Jill pega mais um ônibus para terminar sua viagem (utilizando seu bilhete único).
+
+</p>
+<p>
+
+Depois de anos de experiência, Jill avaliou cada trecho de suas viagens em uma escala inteira de <i>niceness</i>. <br>
+Na escala de <i>niceness</i> valores positivos indicam o quanto Jill gosta daquele trecho, e valores negativos indicam o quanto Jill não gosta.<br>
+Para cada viagem, Jill planeja onde descer do ônibus e começar a pedalar sua bicicleta, 
+e onde parar de pedalar e voltar para o ônibus, de forma que a soma de <i>niceness</i> dos trecho em que Jill pedala seja maximizada.<br>
+Pode acontecer que algumas vezes Jill pedale por trechos que ela não gosta, desde que esses trechos liguem outros que ela gosta o suficiente para compensar.<br>
+E também pode acontecer que nenhum trecho seja <i>niceness</i> o suficiente para andar de bicicleta, nesse caso Jill faz toda a sua viagem de ônibus.
+
+</p>
+<p>
+
+Dado que existem vários caminhos possíveis, Jill pensa que você pode ajudá-la 
+a planejar as suas viagens com um programa de computador.
+
+</p>
+
+<h3>Entrada</h3>
+<p>
+
+Seu programa deve receber como entrada informações sobre as viagens de Jill.<br>
+A primeira linha da entrada contém um inteiro <i>b</i> que corresponde ao número de
+viagens que devem ser planejadas (1 &#8804; b &#8804; 100).<br>
+Para cada viagem <i>r</i> (1 &#8804; r &#8804; b) é informado o número de pontos de ônibus <i>s</i> (2 &#8804; s &#8804; 100000).<br>
+O número de pontos de ônibus é seguido por <i>s-1</i> inteiros <i>n</i><sub><i>1</i></sub> <i>n</i><sub><i>2</i></sub> ... <i>n</i><sub><i>s-1</i></sub> (-1000 &#8804; <i>n</i><sub><i>i</i></sub>  &#8804; 1000), <i>n</i><sub><i>i</i></sub>  indica o valor de <i>niceness</i> do trecho entre as paradas de ônibus <i>i</i> e <i>i+1</i>.<br>
+
+
+
+<h3>Saída</h3>
+<p>
+Para cada viagem, o seu programa deve encontrar os pontos de ônibus inicial
+<i>i</i> e final <i>j</i> que identificam a sequência de trechos consecutivos da viagem com a maior soma de <i>niceness</i> possível, isto é, a soma n<sub>i</sub>+n<sub>i+1</sub>+...+n<sub>j-1</sub> é máxima.<br>
+Caso mais de uma sequência de trechos consecutivos tenha a soma máxima de <i>niceness</i>, escolha aquele com o maior tamanho, isto é, o maior valor de <i>j</i>-<i>i</i>. Caso o empate continue, escolha o trecho que começa primeiro, isto é, com o menor valor de <i>i</i>.<br>
+Dessa forma, para cada viagem <i>r</i> informada na entrada, imprima:
+
+
+
+</p><p>
+<tt>The nicest part of route </tt><i>r</i><tt> is between stops </tt><i>i</i><tt>
+and </tt><i>j</i>
+</p>
+<p>
+Entretanto, se não houver soma máxima positiva, o seu programa deve imprimir:
+</p>
+<p>
+<tt>Route </tt><i>r</i><tt> has no nice parts</tt>
+</p>
+<h3>Exemplo</h3>
+
+<pre><b>Entrada:</b>
+
+3
+3
+-1
+6
+10
+4
+-5
+4
+-3
+4
+4
+-4
+4
+-5
+4
+-2
+-3
+-4
+
+<b>Saída:</b>
+
+The nicest part of route 1 is between stops 2 and 3
+The nicest part of route 2 is between stops 3 and 9
+Route 3 has no nice parts
+</pre>
