@@ -1,0 +1,69 @@
+<div align="center"><h1>SBANK - ordenação de contas bancárias</h1></div>
+
+<p>
+Em um internet banking centenas de operação estão sendo realizadas todos os dias.
+Dado que alguns clientes fazem mais negócios que outros, algumas contas bancárias ocorrem mais vezes em uma lista de operações.
+Sua tarefa é ordenar os números das contas bancárias em ordem crescente.
+Caso uma conta apareça duas ou mais vezes na lista, escreve o número de repetições exatamente depois do número da conta.
+O número de cada conta tem o seguinte formato:
+<b>2</b> dígitos de controle, um código de <b>8</b> dígitos do banco, <b>16</b> dígitos identificadores do titular da conta  (escritos em grupos de quatro dígitos), por exemplo (no final de cada linha existe exatamente um espaço em branco):
+</p><table align="center"><tbody><tr><td bgcolor="navy"><font color="yellow"><b>30 10103538 2222 1233 6160 0142&nbsp;</b></font></td></tr></tbody></table><p></p>
+</p>
+
+
+<p>
+<b>Bancos são instituições de tempo real e eles precisam de soluções RÁPIDAS.</b>
+Implemente uma solução de ordenação utilizando o radix-sort*
+</p>
+
+
+<h3>Entrada</h3>
+<p align="justify">
+<br><i>t</i> [número de casos de testes &lt;= <b>5</b>]
+<br><i>n</i> [número de contas bancárias&lt;= <b>100 000</b>]
+<br>[lista das contas]
+<br>[linha em branco]
+<br>[próximo caso de teste]
+
+<h3>Saída</h3>
+<p align="justify">
+<br>[lista ordenada de contas bancárias com o número de repetições de cada conta]
+<br>[linha em branco]
+<br>[próximo caso de teste]
+</p>
+<h3>Exemplo</h3>
+<pre>Entrada:
+2
+6
+03 10103538 2222 1233 6160 0142
+03 10103538 2222 1233 6160 0141
+30 10103538 2222 1233 6160 0141
+30 10103538 2222 1233 6160 0142
+30 10103538 2222 1233 6160 0141
+30 10103538 2222 1233 6160 0142
+
+5
+30 10103538 2222 1233 6160 0144
+30 10103538 2222 1233 6160 0142
+30 10103538 2222 1233 6160 0145
+30 10103538 2222 1233 6160 0146
+30 10103538 2222 1233 6160 0143
+
+Saída:
+03 10103538 2222 1233 6160 0141 1
+03 10103538 2222 1233 6160 0142 1
+30 10103538 2222 1233 6160 0141 2
+30 10103538 2222 1233 6160 0142 2
+
+30 10103538 2222 1233 6160 0142 1
+30 10103538 2222 1233 6160 0143 1
+30 10103538 2222 1233 6160 0144 1
+30 10103538 2222 1233 6160 0145 1
+30 10103538 2222 1233 6160 0146 1
+</pre>
+
+<hr>
+
+<p> 
+* Você deve implementar o radix-sort para este exercício.
+</p>
